@@ -23,7 +23,7 @@ And also some other information
 
 ***examples***
 
-![1.png](C:\Users\jhon\Desktop\[raw.githubusercontent.com](https:\raw.githubusercontent.com\Hawkaoaoa\NMLS-SPS\main\figures\1.png))
+![1.png](raw.githubusercontent.com\Hawkaoaoa\NMLS-SPS\main\figures\1.png)
 
 Then we score each string based on the following rules:
 
@@ -45,7 +45,7 @@ Then we score each string based on the following rules:
 
 ***Length < 510***
 
-![2.png](C:\Users\jhon\Desktop\[raw.githubusercontent.com](https:\raw.githubusercontent.com\Hawkaoaoa\NMLS-SPS\main\figures\2.png))
+![2.png](raw.githubusercontent.com\Hawkaoaoa\NMLS-SPS\main\figures\1.png)
 
 ​	Most of the data has a shorter length than 100, so we primarily set it as the threshold for eliminating the strings (Of course, strings with length long than this are not preferred, and should be labeled with very low score even without modeling.)
 
@@ -76,7 +76,7 @@ Additionally, when we check the scores distribution of the data
 
 ***scores distribution***
 
-![3.png](C:\Users\jhon\Desktop\[raw.githubusercontent.com](https:\raw.githubusercontent.com\Hawkaoaoa\NMLS-SPS\main\figures\3.png))
+![3.png](raw.githubusercontent.com\Hawkaoaoa\NMLS-SPS\main\figures\3.png)
 
 we could see the data is clearly very imbalanced. 
 
