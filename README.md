@@ -76,7 +76,7 @@ Additionally, when we check the scores distribution of the data
 
 ***scores distribution***
 
-![NMLS-SPS/4.png at main · Hawkaoaoa/NMLS-SPS (github.com)](https://github.com/Hawkaoaoa/NMLS-SPS/blob/main/figures/4.png)
+![NMLS-SPS/3.png at main · Hawkaoaoa/NMLS-SPS (github.com)](https://github.com/Hawkaoaoa/NMLS-SPS/blob/main/figures/3.png)
 
 we could see the data is clearly very imbalanced. 
 
