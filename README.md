@@ -61,6 +61,11 @@ Then we score each string based on the following rules:
 
 ​	As for these problems, we clean the raw data file with ***filter.py*** and get the data needed for the model training.
 
+***Preprocessed dataset***
+
+- 6219671 strings
+- 9:1 for train num : test num
+
 # Model
 
 ​	The model we use is ***CODER***, which is provided by Zheng Yuan *et al.*
@@ -228,23 +233,42 @@ Trophamine 6 % Injectable Product	0.9966923925027563
 
 - whether only one should be kept needs further consultation for the practical considerations.
 
-8.
-
-
-
 Specifically, the ***predict.py*** can be used to evaluate the the sting you input 
 
 ```
-python predict.py --sting="Medical service"
+python predict.py --string="Medical service"
 ```
 
-Some other Args
-
-- pretrained_model_name
-- pretrained_model_path
-- device
+>  Some other Args
+>
+> - pretrained_model_name
+>
+>   (load basic bert model structure)
+>
+> - pretrained_model_path
+>
+>   (the path to the model fine-tuned for the string scoring)
+>
+> - device
 
 ***Demonstrations***
+
+```
+>> python predict.py --string="AASMv2.6"
+The score for "AASMv2.6" is 0.8253
+>> python predict.py --string="a a s m v2.6"
+The score for "a a s m v2.6" is 0.5661
+
+>> python predict.py --string="aspirin"
+The score for "aspirin" is 0.9739
+>> python predict.py --string="%aspirin#"
+The score for "%aspirin#" is 0.6599
+
+>> python predict.py --string="drug [AS23]"
+The score for "drug [AS23]" is 0.9981
+>> python predict.py --string="Give me another drug [AS23] to treat the patient P2314"
+The score for "Give me another drug [AS23] to treat the patient P2314" is 0.6328
+```
 
 # Requirements
 
