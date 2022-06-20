@@ -115,6 +115,36 @@ python main.py --num_epochs 30
 
 Some analyzing functions are provided in the ***stat.py***
 
+***Mapping of the prediction score distribution and target score distribution***
+
+![NMLS-SPS/4.png at main · Hawkaoaoa/NMLS-SPS (github.com)](https://github.com/Hawkaoaoa/NMLS-SPS/blob/main/figures/4.png)
+
+***Metrics for regression***
+
+> MAE
+>
+> - 0.048
+>
+> sMAPE
+>
+> - 10.257%
+>
+> RMSE
+>
+> - 0.083
+>
+> $R^2$
+>
+> - 0.811
+
+A detailed one-one check can be found in the ***Epoch8_sample.txt*** file 
+
+(we delete the last a few lines considering the file size.)
+
+- Epoch8 means that the model current is running in 8th epoch
+
+  ( it's still training now.)
+
 # Case-study
 
 1.Generally, the strings with more precedence in the NMLS recommended table and also shorter length will get higher scores.
@@ -255,19 +285,19 @@ python predict.py --string="Medical service"
 
 ```
 >> python predict.py --string="AASMv2.6"
-The score for "AASMv2.6" is 0.8253
+The score for "AASMv2.6" is 0.8757
 >> python predict.py --string="a a s m v2.6"
-The score for "a a s m v2.6" is 0.5661
+The score for "a a s m v2.6" is 0.6570
 
 >> python predict.py --string="aspirin"
-The score for "aspirin" is 0.9739
+The score for "aspirin" is 0.9999
 >> python predict.py --string="%aspirin#"
-The score for "%aspirin#" is 0.6599
+The score for "%aspirin#" is 0.6488
 
 >> python predict.py --string="drug [AS23]"
-The score for "drug [AS23]" is 0.9981
+The score for "drug [AS23]" is 0.9530
 >> python predict.py --string="Give me another drug [AS23] to treat the patient P2314"
-The score for "Give me another drug [AS23] to treat the patient P2314" is 0.6328
+The score for "Give me another drug [AS23] to treat the patient P2314" is 0.7132
 ```
 
 # Requirements
