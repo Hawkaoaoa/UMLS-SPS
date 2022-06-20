@@ -80,7 +80,7 @@ Additionally, when we check the scores distribution of the data
 
 we could see the data is clearly very imbalanced. 
 
-​	As for the problem of imbalanced data distribution for the regression task, we adopt the newly proposed loss function ***Balanced MSE**, which is provided by Jiawei Ren *et al*.
+​	As for the problem of imbalanced data distribution for the regression task, we adopt the newly proposed loss function ***Balanced MSE***, which is provided by Jiawei Ren *et al*.
 
 > [jiawei-ren/BalancedMSE: [CVPR 2022 Oral\] Balanced MSE for Imbalanced Visual Regression https://arxiv.org/abs/2203.16427 (github.com)](https://github.com/jiawei-ren/BalancedMSE)
 
