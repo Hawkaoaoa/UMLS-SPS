@@ -50,9 +50,9 @@ def main():
     )
     parser.add_argument(
         "--pretrained_model_path",
-        default="./Coder_06_19_21_00/checkpoints-1/model.pth",
+        default="./Coder_06_19_21_08/checkpoints-8/model.pth",
         type=str,
-        help="Path to the file of scored strings ",
+        help="the path to the model fine-tuned for the string scoring",
     )
     parser.add_argument("--device", default="cuda:1", type=str,
                     help="device assigned for modelling") 
