@@ -133,7 +133,7 @@ Some analyzing functions are provided in the ***stat.py***
 >
 > - 0.083
 >
-> $R^2$
+> R2
 >
 > - 0.811
 
