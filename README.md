@@ -2,7 +2,7 @@
 
 # Preprocessing
 
-The format of ***MRCONSO.csv*** of the NMLS database.
+The format of ***MRCONSO.csv*** of the UMLS database.
 
 e.g.
 
@@ -23,11 +23,11 @@ And also some other information
 
 ***examples***
 
-![NMLS-SPS/1.png at main · Hawkaoaoa/NMLS-SPS (github.com)](https://github.com/Hawkaoaoa/NMLS-SPS/blob/main/figures/1.png)
+![UMLS-SPS/1.png at main · Hawkaoaoa/UMLS-SPS (github.com)](https://github.com/Hawkaoaoa/UMLS-SPS/blob/main/figures/1.png)
 
 Then we score each string based on the following rules:
 
-1. Rankings in the NMLS recommended preference table
+1. Rankings in the UMLS recommended preference table
 
    (linear affinity)
 
@@ -45,7 +45,7 @@ Then we score each string based on the following rules:
 
 ***Length < 510***
 
-![NMLS-SPS/2.png at main · Hawkaoaoa/NMLS-SPS (github.com)](https://github.com/Hawkaoaoa/NMLS-SPS/blob/main/figures/2.png)
+![UMLS-SPS/2.png at main · Hawkaoaoa/UMLS-SPS (github.com)](https://github.com/Hawkaoaoa/UMLS-SPS/blob/main/figures/2.png)
 
 ​	Most of the data has a shorter length than 100, so we primarily set it as the threshold for eliminating the strings (Of course, strings with length long than this are not preferred, and should be labeled with very low score even without modeling.)
 
@@ -53,7 +53,7 @@ Then we score each string based on the following rules:
 
 > Some strings are the same with  a single **CUI**. Considering we are scoring merely on the preference of the strings, we simply keep only one string with the highest score.
 
-​	By running the ***score.py***, we could get the raw score data file from the NMLS corpus.
+​	By running the ***score.py***, we could get the raw score data file from the UMLS corpus.
 
 ***More modification***
 
@@ -76,7 +76,7 @@ Additionally, when we check the scores distribution of the data
 
 ***scores distribution***
 
-![NMLS-SPS/3.png at main · Hawkaoaoa/NMLS-SPS (github.com)](https://github.com/Hawkaoaoa/NMLS-SPS/blob/main/figures/3.png)
+![UMLS-SPS/3.png at main · Hawkaoaoa/UMLS-SPS (github.com)](https://github.com/Hawkaoaoa/UMLS-SPS/blob/main/figures/3.png)
 
 we could see the data is clearly very imbalanced. 
 
@@ -117,7 +117,7 @@ Some analyzing functions are provided in the ***stat.py***
 
 ***Mapping of the prediction score distribution and target score distribution***
 
-![NMLS-SPS/4.png at main · Hawkaoaoa/NMLS-SPS (github.com)](https://github.com/Hawkaoaoa/NMLS-SPS/blob/main/figures/4.png)
+![UMLS-SPS/4.png at main · Hawkaoaoa/UMLS-SPS (github.com)](https://github.com/Hawkaoaoa/UMLS-SPS/blob/main/figures/4.png)
 
 ***Metrics for regression***
 
@@ -147,7 +147,7 @@ A detailed one-one check can be found in the ***Epoch8_sample.txt*** file
 
 # Case-study
 
-1.Generally, the strings with more precedence in the NMLS recommended table and also shorter length will get higher scores.
+1.Generally, the strings with more precedence in the UMLS recommended table and also shorter length will get higher scores.
 
 e.g.
 
@@ -198,7 +198,7 @@ MDA	0.9636163175303197
 mda	0.7276736493936053
 ```
 
-4.Some strings seem to be brief enough but have the score of 0, this is mainly because they are not matched to the NMLS recommended table. The possible reasons are 
+4.Some strings seem to be brief enough but have the score of 0, this is mainly because they are not matched to the UMLS recommended table. The possible reasons are 
 
 - The sources are not reliable
 - The terms are not updated to date
