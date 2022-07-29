@@ -170,4 +170,3 @@ def test_epoch(criterion, test_loader, model, device, epoch):
     logging.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
     
     return total_mae, output_lst, targets_lst
-

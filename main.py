@@ -86,7 +86,8 @@ def train(args):
         if test_loss < baseline:
             baseline = test_loss
 
-            checkpoints_dirname = "Coder_" + timestamp
+            # checkpoints_dirname = "Coder_" + timestamp
+            checkpoints_dirname = "Biobert_" + timestamp
             os.makedirs(checkpoints_dirname, exist_ok=True)
             save_pretrained(model, optimizer, 
                             checkpoints_dirname + '/checkpoints-{}/'.format(epoch))
@@ -115,7 +116,8 @@ def main():
 
     parser.add_argument(
         "--pretrained_model_name",
-        default="GanjinZero/coder_eng",
+        # default="GanjinZero/coder_eng",
+        default="dmis-lab/biobert-v1.1",
         type=str,
         help="Bert pretrained model",
     )
@@ -144,7 +146,7 @@ def main():
                     help="parameter for the dataloader")    
     parser.add_argument("--if_drop_last", default=True, type=bool,
                     help="parameter for the dataloader")  
-    parser.add_argument("--device", default="cuda:1", type=str,
+    parser.add_argument("--device", default="cuda:0", type=str,
                     help="device assigned for modelling")    
 
     parser.add_argument("--init_sigma", default=1.5, type=float,

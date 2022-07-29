@@ -44,17 +44,18 @@ def main():
 
     parser.add_argument(
         "--pretrained_model_name",
-        default="GanjinZero/coder_eng",
+        # default="GanjinZero/coder_eng",
+        default="dmis-lab/biobert-v1.1",
         type=str,
         help="Bert pretrained model",
     )
     parser.add_argument(
         "--pretrained_model_path",
-        default="./Coder_06_19_21_08/checkpoints-8/model.pth",
+        default="./Biobert_07_06_20_02/checkpoints-39/model.pth",
         type=str,
         help="the path to the model fine-tuned for the string scoring",
     )
-    parser.add_argument("--device", default="cuda:1", type=str,
+    parser.add_argument("--device", default="cuda:0", type=str,
                     help="device assigned for modelling") 
 
     parser.add_argument("--string", default="Diet Drinks", type=str,

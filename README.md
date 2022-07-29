@@ -113,7 +113,13 @@ python main.py --num_epochs 30
 
 # Results
 
-Some analyzing functions are provided in the ***stat.py***
+Some analyzing functions are provided in the ***stat.py***.
+
+And the newest figure is derived from the training of model ***BioBERT v1.1(cased)***
+
+[dmis-lab/biobert: Bioinformatics'2020: BioBERT: a pre-trained biomedical language representation model for biomedical text mining (github.com)](https://github.com/dmis-lab/biobert)
+
+Because in the case study, we found that it is necessary to notice the difference in the upper case or lower case of the biomedical string.
 
 ***Mapping of the prediction score distribution and target score distribution***
 
@@ -123,25 +129,23 @@ Some analyzing functions are provided in the ***stat.py***
 
 > MAE
 >
-> - 0.048
+> - 0.025
 >
 > sMAPE
 >
-> - 10.257%
+> - 7.086%
 >
 > RMSE
 >
-> - 0.083
+> - 0.071
 >
 > R2
 >
-> - 0.811
+> - 0.8776
 
-A detailed one-one check can be found in the ***Epoch8_sample.txt*** file 
+A detailed one-one check can be found in the ***biobert_39*** file 
 
-(we delete the last a few lines considering the file size.)
-
-- Epoch8 means that the model current is running in 8th epoch
+- ***39*** means that the model current is running in 39th epoch
 
   ( it's still training now.)
 
@@ -284,20 +288,34 @@ python predict.py --string="Medical service"
 ***Demonstrations***
 
 ```
->> python predict.py --string="AASMv2.6"
-The score for "AASMv2.6" is 0.8757
->> python predict.py --string="a a s m v2.6"
-The score for "a a s m v2.6" is 0.6570
-
 >> python predict.py --string="aspirin"
-The score for "aspirin" is 0.9999
+The score for "aspirin" is 0.9996
 >> python predict.py --string="%aspirin#"
-The score for "%aspirin#" is 0.6488
+The score for "%aspirin#" is 0.8302
 
->> python predict.py --string="drug [AS23]"
-The score for "drug [AS23]" is 0.9530
->> python predict.py --string="Give me another drug [AS23] to treat the patient P2314"
-The score for "Give me another drug [AS23] to treat the patient P2314" is 0.7132
+>> python predict.py --string="MILK"
+The score for "MILK" is 0.8948
+>> python predict.py --string="How often did you have MILK, either to drink or on cereal in past 30D"
+The score for "How often did you have MILK, either to drink or on cereal in past 30D" is 0.4743
+
+>> python predict.py --string="AASMv2.6"
+The score for "AASMv2.6" is 0.8939
+>> python predict.py --string="A A S M v 2.6"
+The score for "A A S M v 2.6" is 0.7455
+
+>> python predict.py --string="Citrate Hydrolyase"
+The score for "Citrate Hydrolyase" is 0.9999
+>> python predict.py --string="Hydrolyase, Citrate"
+The score for "Hydrolyase, Citrate" is 0.7351
+
+>> python predict.py --string="HHHS"
+The score for "HHHS" is 0.8897
+>> python predict.py --string="hhhs"
+The score for "hhhs" is 0.7427
+>> python predict.py --string="prodipin"
+The score for "prodipin" is 0.9901
+>> python predict.py --string="PRODIPIN"
+The score for "PRODIPIN" is 0.8960
 ```
 
 # Requirements
